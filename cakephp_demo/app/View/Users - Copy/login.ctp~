@@ -1,0 +1,56 @@
+<!-- View/Users/login.ctp -->
+<div class="users form">
+<?php echo $this->Session->flash('auth'); ?>
+	<!-- Start ログイン -->
+<?php echo $this->Form->create('User'); ?>
+	<div class="table borderAll" style="width:50%;margin:10px auto;">
+        <div class="tr">
+            <div class="td bg_orange2 border_right_bottom">ログインID</div>
+            <div class="td bg_orange1 border_bottom">
+				<div class="form-group mb0">
+					<?php
+						echo $this->Form->input('username', array(
+							'label' =>false,
+							'class'=> 'form-control border-input width200',
+							'div' => false
+						));
+					?>
+				</div>
+			</div>
+        </div>
+		<div class="tr">
+            <div class="td bg_orange2 border_right_bottom">パスワード</div>
+            <div class="td bg_orange1 border_bottom">
+				<div class="form-group mb0">
+					<?php
+						echo $this->Form->input('password', array(
+							'label' =>false,
+							'class'=> 'form-control border-input width200',
+							'div' => false
+						));
+					?>
+				</div>
+			</div>
+        </div>
+		<div class="tr">
+            <div class="td bg_orange2 border_right">&nbsp;</div>
+            <div class="td bg_orange1">
+				<div class="form-group"> 
+					<?php 
+						echo $this->Form->submit(__('ログイン'), array('div' => false, 'class' => 'btn_blue f_right margin_right5'));
+					?>
+				</div>
+			</div>
+        </div>
+    </div>
+<?php echo $this->Form->end(); ?>
+	<!-- End ログイン -->
+
+	<!-- Start おしらせ -->
+	<div class="bg_orange1 padding_bottom5">
+		<div class="bg_orange4">おしらせ</div>
+		<div class="bg_light_yellow" style="height:150px;margin: 10px 15px 2px 15px;">&nbsp;</div>
+	</div>
+	<!-- End おしらせ -->
+	
+</div>
